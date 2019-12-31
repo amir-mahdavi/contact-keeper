@@ -9,7 +9,7 @@ const Contacts = props => {
   return (
     <Fragment>
       {contacts.map(contact => (
-        <ContactItem key={contact.id} {...contact}></ContactItem>
+        <ContactItem key={contact.id} contact={contact} />
       ))}
     </Fragment>
   );

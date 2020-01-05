@@ -15,6 +15,11 @@ export default (state, action) => {
         ...state,
         contacts: [...state.contacts, action.payload]
       };
+    case UPDATE_CONTACT:
+      return {
+        ...state,
+        contacts: state.contacts.map(c => (c.id === action.payload.id ? action.payload : c))
+      };
     case DELETE_CONTACT:
       return {
         ...state,
